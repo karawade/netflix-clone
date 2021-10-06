@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import Banner from './Banner';
 
 const Home = () => (
   <div>
+    <Banner />
     <h1>111 Hello, world!</h1>
     <h1>Hello, world!</h1>
     <h1>Hello, world!</h1>

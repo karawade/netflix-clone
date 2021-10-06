@@ -4,10 +4,13 @@
 // 2. Include any default variable overrides here
 $body-bg: #141414;
 $body-color: #fff;
+$navbar-padding-y: 0;
+$navbar-brand-padding-y: 0;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
 
 // 4. Include any optional Bootstrap components as you like
 @import "../node_modules/bootstrap/scss/root";
@@ -17,10 +20,19 @@ $body-color: #fff;
 @import "../node_modules/bootstrap/scss/containers";
 @import "../node_modules/bootstrap/scss/grid";
 
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api";
+
 // 5. Add additional custom code here
 
 $custom-colors: (
-  "transparent": transparent
+  "nf-dark": #141414,
+  "nf-transpatent60":rgba(51, 51, 51, 0.6),
+  "nf-transparent": transparent
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);

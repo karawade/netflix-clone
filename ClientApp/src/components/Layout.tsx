@@ -9,9 +9,9 @@ const Layout = ({ children }: ChildNode) => {
     return (
         <React.Fragment>
             <NavMenu />
-            <div className="container">
-                {children}
-            </div>
+
+            {children}
+
         </React.Fragment>
     );
 }

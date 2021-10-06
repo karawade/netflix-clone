@@ -1,16 +1,17 @@
 .navmenu {
-    padding: 0;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
 }
 
 .navmenu_brand {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .navmenu_brand > img {
-    height: 50px;
+  height: 50px;
 }
 
 .navmenu_profile {
-    height: 50px;
+  height: 50px;
 }
