@@ -1,0 +1,16 @@
+.navmenu {
+    padding: 0;
+}
+
+.navmenu_brand {
+    padding: 0;
+    margin: 0;
+}
+
+.navmenu_brand > img {
+    height: 50px;
+}
+
+.navmenu_profile {
+    height: 50px;
+}
