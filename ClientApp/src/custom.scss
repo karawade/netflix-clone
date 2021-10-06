@@ -10,7 +10,22 @@ $navbar-brand-padding-y: 0;
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
-@import "../node_modules/bootstrap/scss/utilities";
+
+// works for btn-* link-*
+$custom-colors: (
+  "nf-dark": #141414,
+  "nf-transpatent-60": rgba(51, 51, 51, 0.6),
+  "nf-transparent": transparent,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$custom-spacers: (
+  6: ($spacer * 3.5),
+  7: ($spacer * 4),
+  8: ($spacer * 4.5),
+  9: ($spacer * 5)
+);
+$spacers: map-merge($spacers, $custom-spacers);
 
 // 4. Include any optional Bootstrap components as you like
 @import "../node_modules/bootstrap/scss/root";
@@ -18,21 +33,15 @@ $navbar-brand-padding-y: 0;
 @import "../node_modules/bootstrap/scss/type";
 @import "../node_modules/bootstrap/scss/images";
 @import "../node_modules/bootstrap/scss/containers";
-@import "../node_modules/bootstrap/scss/grid";
+// @import "../node_modules/bootstrap/scss/grid";
 
 @import "../node_modules/bootstrap/scss/buttons";
 @import "../node_modules/bootstrap/scss/nav";
 @import "../node_modules/bootstrap/scss/navbar";
 
 @import "../node_modules/bootstrap/scss/helpers";
+
+@import "../node_modules/bootstrap/scss/utilities";
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 // 5. Add additional custom code here
-
-$custom-colors: (
-  "nf-dark": #141414,
-  "nf-transpatent60":rgba(51, 51, 51, 0.6),
-  "nf-transparent": transparent
-);
-
-$theme-colors: map-merge($theme-colors, $custom-colors);

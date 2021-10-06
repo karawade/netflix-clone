@@ -42,15 +42,14 @@ const Banner = () => {
 
     return (
         <div className="banner" style={{ backgroundImage: `url("https://image.tmdb.org/t/p/original${movie.backdrop_path}")` }}>
-            <div className="pt-3 ml-5">
+            <div className="pt-3 ms-5">
                 <h1 className="h3 font-weight-bold">{movie.title || movie.name || movie.original_name}</h1>
                 <div className="py-3">
-                    <button className="btn btn-primary px-4 pt-0 pb-1 font-weight-bold">Play</button>
-                    <button className="btn btn-nf-dark px-4 pt-0 pb-1 ml-2 font-weight-bold">My List</button>
+                    <button className="btn btn-nf-transpatent-60 px-4 pt-0 pb-1 font-weight-bold">Play</button>
+                    <button className="btn btn-nf-transpatent-60 px-4 pt-0 pb-1 ms-2 font-weight-bold">My List</button>
                 </div>
                 <h6 className="banner-desc">{truncate(movie.overview ?? '', 150)}</h6>
             </div>
-            <div className="d-block ml-5 pt-5">Test</div>
             <div className="banner-bottom" />
         </div>
     )
