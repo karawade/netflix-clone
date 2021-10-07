@@ -8,7 +8,6 @@ type ChildNode = {
 const Layout = ({ children }: ChildNode) => {
     return (
         <React.Fragment>
-            <NavMenu />
             {children}
         </React.Fragment>
     );
