@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore.Sqlite;
+using netflix_clone.Models;
 
 namespace netflix_clone
 {
@@ -22,7 +24,7 @@ namespace netflix_clone
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-
+            services.AddDbContext<UserContext>(opt => opt.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
