@@ -17,3 +17,6 @@ export const requests = {
     fetchDocumentaries: `/discover/movie?api_key=${TMDBKEY}&language=en-us&with_genres=99`,
 }
 
+
+// export { requests };
+// export default tmdb; 
