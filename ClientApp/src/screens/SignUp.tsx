@@ -1,8 +1,6 @@
 import React, { useRef } from 'react';
 import './SignUp.scss';
 
-const uri = 'api/User';
-
 type User = {
     email: string;
     password: string;
@@ -21,7 +19,7 @@ const SignUp = () => {
             password: passwordRef.current.value
         };
 
-        fetch(uri, {
+        fetch('api/User', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -38,6 +36,27 @@ const SignUp = () => {
 
     const signIn = (e: any) => {
         e.preventDefault();
+        if (emailRef.current === null) return;
+        if (passwordRef.current === null) return;
+
+        const user: User = {
+            email: emailRef.current.value,
+            password: passwordRef.current.value
+        };
+
+        fetch('api/UU', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(response => response.json())
+            .then((res) => {
+                console.log(res);
+            })
+            .catch(error => console.error('Unable to singin', error));
     }
 
     return (
